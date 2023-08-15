@@ -47,5 +47,4 @@ public class TrackCredentials {
     public void set_trackLongitude(short longitude) {
         this.trackLongitude = longitude;
     }
-   
 }

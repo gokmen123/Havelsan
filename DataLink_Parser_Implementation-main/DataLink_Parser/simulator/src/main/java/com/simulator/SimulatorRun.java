@@ -22,7 +22,6 @@ public class SimulatorRun {
             
             FileReader file = new FileReader(fileName);
             List<String> ls = file.readData();
-            
 
             for (int i = 0; i < ls.size(); i++) {
                 client.startConnection("127.0.0.1", 5000);

@@ -12,18 +12,10 @@
         },
         {
             "type": "java",
-            "name": "GreetServer",
-            "request": "launch",
-            "mainClass": "com.backend.GreetServer",
-            "projectName": "backend"
-        },
-        {
-            "type": "java",
             "name": "ServerRun",
             "request": "launch",
             "mainClass": "com.backend.ServerRun",
             "projectName": "backend"
-            
         },
         {
             "type": "java",
@@ -35,10 +27,11 @@
         },
         {
             "type": "java",
-            "name": "GreetClient",
+            "name": "GreetServer",
             "request": "launch",
-            "mainClass": "com.frontend.GreetClient",
-            "projectName": "frontend"
+            "mainClass": "com.frontend.GreetServer",
+            "projectName": "frontend",
+            "vmArgs": "--module-path \"C:/JavaFx/javafx-sdk-20.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",

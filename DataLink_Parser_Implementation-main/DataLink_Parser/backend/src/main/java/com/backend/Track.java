@@ -63,7 +63,4 @@ public class Track {
     public void set_trackLongitude(short longitude) {
         this.trackLongitude = longitude;
     }
-    public void getAll(){
-        System.out.println("trackid= "+trackID+" head "+trackHeading+" speed "+trackSpeed+" latitude "+trackLatitude+" longtidude "+trackLongitude);
-    }
 }

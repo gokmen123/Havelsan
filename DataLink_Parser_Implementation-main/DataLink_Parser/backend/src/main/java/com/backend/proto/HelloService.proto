@@ -3,18 +3,17 @@ option java_multiple_files = true;
 package protocomp;
 
 service Greeter {
-   rpc greet (TrackRequest) returns (TrackMessage) {}
-   
+   rpc greet (TrackMessage) returns (TrackResponse) {}
 }
 
 message TrackMessage {
-   int32 trackID = 1; 
+   int32 trackID = 1;
    int32 trackHeading = 2;
    int32 trackSpeed = 3;
    sint32 trackLatitude = 4;
    sint32 trackLongitude = 5;
 }
 
-message TrackRequest {
+message TrackResponse{
    string message = 1;
 }

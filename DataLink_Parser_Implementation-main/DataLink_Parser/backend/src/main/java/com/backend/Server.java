@@ -12,7 +12,7 @@ public class Server {
     public void start(int port) throws IOException{
         System.out.println("--------SERVER STARTED--------");
         serverSocket = new ServerSocket(port);
-        //serverSocket.setSoTimeout(waitingSecs * 1000);
+        serverSocket.setSoTimeout(waitingSecs * 1000);
     }
 
     public String listen() throws IOException {
