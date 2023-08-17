@@ -5,33 +5,33 @@ import java.util.List;
 
 public class TrackList {
 
-    List <Track> list_tracks;
+    static List <Track>  list_tracks;
 
     public TrackList() {
         list_tracks = new ArrayList<Track>();
     }
 
-    public void addTrack(Track track) {
+    public static void addTrack(Track track) {
         if (!hasTrack(track)) {
             list_tracks.add(track);
         }
     }
 
-    public boolean hasTrack(Track new_track) {
+    public static boolean hasTrack(Track new_track) {
         for(Track track_ele : list_tracks) {
             if(new_track.get_trackID() == track_ele.get_trackID()) return true;
         }
         return false;
     }
 
-    public int getSize() {
-        return list_tracks.size();
+    public  static int getSize() {
+        return  list_tracks.size();
     }
 
-    public List<Track> getList() {
+    public static List<Track> getList() {
         return list_tracks;
     }
-    public boolean replaceTrack(Track track){
+    public static boolean replaceTrack(Track track){
         if(list_tracks.size()!=0){
                 for(int j=0;j<list_tracks.size();j++){
                 if(list_tracks.get(j).get_trackID()==track.get_trackID()){
@@ -49,7 +49,7 @@ public class TrackList {
         // TODO Auto-generated method stub
         return super.toString();
     }
-    public boolean isEmpty(){
+    public static boolean isEmpty(){
         if(list_tracks.size()==0){
             return true;
         }

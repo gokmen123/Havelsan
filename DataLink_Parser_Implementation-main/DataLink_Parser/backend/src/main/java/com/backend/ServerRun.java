@@ -56,6 +56,6 @@ public class ServerRun {
 
         }
         
-        
+        server.stop();
     }
 }

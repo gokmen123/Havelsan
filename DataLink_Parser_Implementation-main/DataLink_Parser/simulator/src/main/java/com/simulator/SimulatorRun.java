@@ -8,6 +8,7 @@ import com.simulator.exceptions.NotSixtyFourBitDataException;
 import com.simulator.exceptions.NullLineException;
 
 public class SimulatorRun {
+    public static int firstDelay=0;
     public static void main(String[] args) throws IOException, NullPointerException{
         
         /*
@@ -27,6 +28,18 @@ public class SimulatorRun {
                 client.startConnection("127.0.0.1", 5000);
 
                 String msg = ls.get(i);
+                int delayInSeconds = 5;
+                if(getDelay()>0){
+                    try {
+                        Thread.sleep(delayInSeconds * 1000);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    } 
+                }
+                setDelay();
+                
+           
                 client.sendMessage(msg);
                 
                 client.stopConnection();
@@ -48,5 +61,11 @@ public class SimulatorRun {
         catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public static int getDelay(){
+        return firstDelay;
+    }
+    public static void setDelay(){
+        firstDelay++;
     }
 }
