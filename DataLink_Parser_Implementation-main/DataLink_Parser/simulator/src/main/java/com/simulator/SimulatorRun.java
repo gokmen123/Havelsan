@@ -37,7 +37,7 @@ public class SimulatorRun {
                         e.printStackTrace();
                     } 
                 }
-                setDelay();
+;                setDelay();
                 
            
                 client.sendMessage(msg);
